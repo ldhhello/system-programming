@@ -1,0 +1,26 @@
+# Assignment 11. 검색
+
+
+1. ~/logs 폴더 밑에 오늘일자로 된 log 파일을 찾아서 log_오늘일자.tar.gz 파일로 압축하시오.
+(힌트) 
+- 오늘일자 : date +%Y%m%d
+- 압축하기 : tar -zcvf xxx.tar.gz file명
+- tar: "구성 요소 이름 앞에 붙은 '/' 제거 중" 메시지는 무시하기
+
+=> find ~/logs -name `date +%Y%m%d.log` -exec tar -zcvf `date +log_%Y%m%d.tar.gz` {} \;
+
+
+2. ~/logs 폴더 밑에 파일 사이즈가 1M 이상인 gz 파일 모두 삭제하기
+
+=> find ~/logs -size +1M -name "*.gz" -exec rm -f {} \;
+
+
+3. /etc/services 파일에서 tcp 서비스를 찾아 그 개수를 출력하기
+
+=> cat /etc/services | grep /tcp | wc -l
+
+
+4. /etc/services 파일에서 tcp 서비스 이름만을 찾아 오름차순으로 sort하고 그 결과를 sort.txt 파일에 저장하기
+(힌트) grep, awk, sort
+
+=> cat /etc/services | grep /tcp | awk '{ print $1 }' | sort > sort.txt

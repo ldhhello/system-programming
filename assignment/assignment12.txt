@@ -1,0 +1,39 @@
+# Assignment 12. 개발도구
+
+
+1. strace 툴을 strace한 후 아래 질문에 답하시오.
+
+1) 호출 횟수(calls)가 가장 많은 시스템 콜은?
+
+=> mmap
+
+2) 총 CPU 시간이 가장 많은 시스템 콜은?
+
+=> mprotect / 0.000048초
+
+3) 총 몇 번의 시스템 콜을 하였나?
+
+=> 87회
+
+
+2. cron에 대한 질문에 답하시오.
+
+1) cron 설정 방법
+
+   *       *       *       *        *      command
+(  분  ) ( 시  ) (일 ) (월  ) ( 요일   )
+
+
+2) 매주 금요일 자정에 /home/test/batch.sh 실행
+
+=> 0 0 * * 5 /home/test/batch.sh
+
+
+3) 매달 15일 23시 55분에 /home/test/batch.sh 실행
+
+=> 55 23 15 * * /home/test/batch.sh
+
+
+4) 월~금 6시에 /home/test/batch.sh 실행
+
+=> 0 6 0 0 1-5 /home/test/batch.sh

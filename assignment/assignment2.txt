@@ -1,0 +1,49 @@
+# Assignment 2. 사용자와 그룹
+
+
+1. "iu" 계정 추가하기
+
+=> sudo adduser iu 
+
+
+2. "iu" 계정 삭제하기
+
+=> sudo deluser iu
+
+
+3. "animals" 그룹 추가하기
+
+=> sudo adduser --group animals
+
+
+4. "dog"과 "cat" 계정을 "animals" 그룹으로 생성하기
+
+=> sudo adduser --ingroup animals dog
+sudo adduser --ingroup animals cat
+
+
+5. "dog"이 생성한 "dogfile" 파일을 같은 그룹인 "cat"이 수정할 수 있도록 권한 변경하기
+
+=> (8진수법)
+chmod 664 dogfile
+
+=> (의미표기법)
+chmod g+w dogfile
+
+6. "dogfile"을 Other 에서 읽을 수 없도록 권한 변경하기
+
+=> (8진수법)
+chmod 660 dogfile
+
+=> (의미표기법)
+chmod o-r dogfile
+
+7. "dog", "cat" 계정 삭제하기
+
+=> sudo deluser --remove-home dog
+sudo deluser --remove-home cat
+
+
+8. "animals" 그룹 삭제하기
+
+=> sudo delgroup animals

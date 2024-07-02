@@ -1,0 +1,33 @@
+# Assignment 9. 확장
+
+
+문제) 아래 내용을 읽고 assignment9.sh 파일과 assignment9.txt 파일 작성하기
+(2개 파일 모두 Github에 제출하기)
+
+
+1. [Brace Expansion] 3101~3632까지 학번으로 된 디렉토리 생성하기
+
+(실행결과) 3101, 3102 .. 3132, 3201, 3202 .. 3632
+(힌트) mkdir A B => A B 디렉토리 생성
+
+=> mkdir 3{1..6}{01..32}
+
+
+2. [Arithmetic Expansion] 국어 수학 영어점수를 입력받아 총점과 평균을 계산하는 assignment9.sh 파일을 작성하기
+
+(실행1) $ ./assignment9.sh
+Usage: ./assignment9.sh 국어점수 수학점수 영어점수
+
+(실행2) $ ./assignment9.sh 100 90 80
+국어 : 100
+수학 : 90
+영어 : 80
+총점 : 270
+평균 : 90
+
+
+3. [Substring Expansion] 학번이름을 붙여 변수를 생성하고 아래와 같이 학번, 이름을 구분하여 출력하기
+
+=> $ STD="3501홍길동"        # 본인의 학번이름으로 생성
+=> $ echo ${STD:0:4}    # 3501 출력
+=> $ echo ${STD:4}    # 홍길동 출력

@@ -1,0 +1,35 @@
+# Assignment 5. 변수
+
+
+1. SCHOOL이라는 변수에 "DIMIGO" 문자열 할당하기
+
+=> $ SCHOOL='DIMIGO'
+
+
+2. SCHOOL 변수 출력하기
+
+=> $ echo $SCHOOL
+
+
+3. NUM이라는 변수는 정수값만 저장하도록 설정하고 본인의 학번(예: 3501)을 넣기
+
+=> $ declare -i NUM
+=> $ NUM = 3423
+
+
+4. NAME이라는 변수는 배열 형식으로 저장하도록 설정하고 본인의 성(0번 인덱스)과 이름(1번 인덱스)을 넣기
+
+=> $ NAME[0]='이'
+=> $ NAME[1]='동현'
+
+
+5.  위에서 만든 변수를 이용하여 "DIMIGO 3501 홍길동" 형식으로 나오도록 출력하기
+
+=> $ echo ${SCHOOL} ${NUM} ${NAME[0]}${NAME[1]}
+
+
+6. 위에서 만든 SCHOOL, NUM, NAME 변수 모두 삭제하기
+
+=> $ unset SCHOOL
+=> $ unset NUM
+=> $ unset NAME

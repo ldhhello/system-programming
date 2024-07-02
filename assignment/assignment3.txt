@@ -1,0 +1,35 @@
+# Assignment 3. 프로세스와 시그널
+
+
+1. 모든 프로세스를 Full Format으로 출력하기
+
+=> ps -ef
+
+2. python을 포함하는 모든 프로세스를 Full Format으로 출력하기
+
+=> ps -ef | grep python
+
+
+3. 홈 디렉토리에 있는 myscript.sh를 Foreground로 실행하기 (현재 위치 : 홈 디렉토리)
+
+=> ./myscript.sh
+
+
+4. 홈 디렉토리에 있는 myscript.sh를 Background로 실행하기 (현재 위치 : 홈 디렉토리)
+
+=> ./myscript.sh &
+
+
+5. Foreground 프로세스를 Background로 전환하기
+
+=> ( Ctrl+Z )를 눌러 일시중단한 후 ( bg ) 실행
+
+
+6. Background 프로세스를 Foreground로 전환하기
+
+=> ( fg ) 실행
+
+
+7. PID가 1234인 프로세스를 강제로 종료하기 (즉시 종료)
+
+=> kill -9 1234

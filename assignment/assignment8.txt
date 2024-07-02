@@ -1,0 +1,39 @@
+# Assignment 8. 함수
+
+
+문제) 아래 내용을 읽고 assignment8.sh 파일과 assignment8.txt 파일 작성하기
+(2개 파일 모두 Github에 제출하기)
+
+
+1. 학번과 이름을 인자로 입력받아 아래와 같이 출력하는 introduce 함수 작성하기
+
+(변수명) 학번(STD_ID), 이름(STD_NAME)
+(조건) 학번, 이름 필수 입력값 체크 (종료코드 : 1)
+
+
+
+(실행1) ./assignment8.sh
+
+=> Usage: ./assignment8.sh 학번 이름
+
+
+(실행2) ./assignment8.sh 3501 홍길동
+
+=> 안녕하세요, 저는 3501 홍길동입니다.
+
+
+2. assignment8.sh에서 입력받은 학번과 이름을 내보내기
+
+=> export STD_ID=$STD_ID
+=> export STD_NAME=$STD_NAME
+
+
+3. assignment8.sh을 빠져나와서 쉘에서 학번과 이름 출력해보기
+
+=> 결과는? 나오지 않는다
+=> 그 이유는? bash는 assignment8의 부모 프로세스이기 때문이다
+
+
+4. 해당 쉘에서 학번과 이름을 출력할 수 있는 방법은?
+
+=> $ source assignment8.sh [학번] [이름]

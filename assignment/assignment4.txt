@@ -1,0 +1,32 @@
+# Assignment 4. 리디렉션과 파이프라인
+
+
+1. ls -al의 결과를 filelist 파일로 저장하기 (덮어씀)
+
+=> ls -al > filelist
+
+
+2. 현재 디렉토리에 있는 myscript.sh 파일 실행 시 결과는 output 파일에, 에러는 error 파일에 저장하기 (덮어씀)
+
+=> ./myscript.sh >output 2>error
+
+
+3. 현재 디렉토리에 있는 myscript.sh 파일 실행 시 결과는 output 파일에, 에러는 error 파일에 저장하기 (추가함)
+
+=> ./myscript.sh >>output 2>>error
+
+
+4. 현재 디렉토리에 있는 myscript.sh 파일 실행 시 결과와 에러 모두 output 파일에 저장하기 (덮어씀)
+
+=> (첫번째 방식) ./myscript.sh >output 2>&1
+=> (두번째 방식) ./myscript.sh &>output
+
+
+5. 입력 리디렉션을 사용하여 output 파일에 대해 wc 명령어 실행하기
+
+=> wc < output
+
+
+6.  ps -ef 명령어의 결과에서 "root"를 검색한 후, 다시 그 결과에서 "systemd"를 검색하기
+
+=> ps -ef  | grep root | grep systemd
